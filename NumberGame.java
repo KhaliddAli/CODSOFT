@@ -2,9 +2,15 @@ import java.util.*;
 
 public class NumberGame {
     public static void main(String[] args) {
-        game();
+        while(true){
+            int response = game();
+            if(response==0){
+                System.out.println("Thank you for playing!");
+                break;
+            }
+        }
     }
-    public static void game(){
+    public static int game(){
         Scanner sc = new Scanner(System.in);
 
         Random random = new Random();
@@ -45,6 +51,10 @@ public class NumberGame {
         System.out.println("The correct number is: " + target);
         int score = chances/3*100;
         System.out.println("Your score is: " + score + "%");
+
+        System.out.println("Do you want to play the game again? Enter 1 if Yes or 0 if No: ");
+        int response = sc.nextInt();
+        return  response;
     }
 
 }
