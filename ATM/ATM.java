@@ -70,7 +70,7 @@ public class ATM {
             long amount = sc.nextInt();
             long balance = withdrawMoney(account,amount);
 
-            System.out.println("Withdraw successful! Final balance is: " + balance);
+            if(balance!=0) System.out.println("Withdraw successful! Final balance is: " + balance);
         }
         else if(response==3){
             System.out.println("Enter the deposit amount: ");
